@@ -19,7 +19,12 @@
                 margin-left: 100px;
                 margin-right: 100px;
             }
-            p, ul, ol {
+            p {
+                color: #2C363F;
+                text-align: justify;
+                text-indent: 50px;  /* Cria a identação do texto na primeira linha. como se fosse um TAB */
+            }
+            ul, ol {
                 color: #2C363F;
                 text-align: justify;
             }
@@ -48,6 +53,7 @@
             }
             .pic-sub {
                 text-align: center;
+                text-indent: 0px;
                 font-size: 12px;
                 font-weight: bold;
                 text-decoration: underline;
@@ -71,12 +77,16 @@
         <h2 id="quem" class="section-title">Quem sou eu?</h2>
         <img src="profile-pic.jpeg" width="200px" class="center-img" alt="Minha foto de perfil. Raquel Vicente Picanço">
         <p>
-            Olá, tudo bem? =)<br>
+            Olá, tudo bem? =)
+        </p>
+        <p>
             Sou Raquel, tenho <em><strong>24 anos</strong> anos</em>, sou casada e sou de/moro em 
             <em><strong>Manaus/AM</strong></em>.
             Falando um pouco sobre minha vida, sou uma gamer de carteirinha, trader partial time, adoro assistir animes e series, 
             viajar é minha paixão e meu melhor passatempo é estar com minha família.
-            Estou começando agora no mundo dos Devs e escolhi a Trybe para me guiar no início dessa estrada.<br>
+            Estou começando agora no mundo dos Devs e escolhi a Trybe para me guiar no início dessa estrada.
+        </p>
+        <p>
             Irei atualizando esta página conforme for aprendendo novas features, tanto no curso quanto sozinha.
             <ol>
                 <li><a href="#dia1">18/11/2020</a></li>
@@ -87,10 +97,13 @@
             Hoje estou desenvolvendo minhas primeiras páginas web em HTML cru, sem cores, formatações ou animações conforme a imagem.
             Consigo criar listas, adicionar imagens e fazer links internos e externos. 
             Também já aprendemos sobre como funciona a Internet, Unix, Bash, 
-            como fazer versionamento utilizando Git e subir nossos trabalhos para o Github.<br>
+            como fazer versionamento utilizando Git e subir nossos trabalhos para o Github.
+        </p>
+        <p>
             Será mágico acompanhar a evolução que conseguirei com muito esforço e ajuda da Trybe. <strong>#VQV</strong><br>
         </p>
-            <img src="dia1.png" width="1000px" class="center-img" alt="Home do portfólio no dia da criação">
+            <!--Aqui uso tamanho em % e não em px a largura da imagem não ficar maior que a do texto e ficar visualmente feio e desalinhado-->
+            <img src="dia1.png" class="center-img" width="100%" alt="Home do portfólio no dia da criação">
         <p class="pic-sub">
             Home do portfólio no dia da criação<br>
         </p>
