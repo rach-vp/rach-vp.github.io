@@ -2,25 +2,35 @@
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
+        <!--Fonte do título principal-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" 
+        rel="stylesheet">
+        <!--Fonte do restante do body-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style.css">
         <title>RVP - Portfólio</title>
     </head>
     <body>
-        <h1>Raquel Vicente Picanço</h1>
-        <h2>Sumário</h2>
+        <h1 id ="home" class="main-name">Raquel Vicente Picanço</h1>
+        <h2 class="section-title">Sumário</h2>
         <ol>
-            <li><a href="#quem">Quem sou eu?</a></li>
-            <li><a href="#skills">Habilidades</a></li>
+            <li><a href="#quem" class="summary-li">Quem sou eu?</a></li>
+            <li><a href="#skills" class="summary-li">Habilidades</a></li>
                 <ul>
-                    <li><a href="#hard">Hard skills</a></li>
-                    <li><a href="#soft">Soft skills</a></li>
+                    <li><a href="#hard" class="summary-subli">Hard skills</a></li>
+                    <li><a href="#soft"class="summary-subli">Soft skills</a></li>
                 </ul>
-            <li><a href="#readings">Leituras recomendadas</a></li>
-            <li><a href="#socialmedia">Redes sociais</a></li>
+            <li><a href="#readings" class="summary-li">Leituras recomendadas</a></li>
+            <li><a href="#socialmedia" class="summary-li">Redes sociais</a></li>
         </ol>
-        <img id="home" src="profile-pic.jpeg" width="200px" alt="Minha foto de perfil. Raquel Vicente Picanço">
-        <h2 id="quem">Quem sou eu?</h2>
+        <h2 id="quem" class="section-title">Quem sou eu?</h2>
+        <img src="pics/profile-pic.jpeg" width="200px" class="center-img" alt="Minha foto de perfil. Raquel Vicente Picanço">
         <p>
-            Olá, tudo bem? =)<br>
+            Olá, tudo bem? =)
+        </p>
+        <p>
             Sou Raquel, tenho <em><strong>24 anos</strong> anos</em>, sou casada e sou de/moro em 
             <em><strong>Manaus/AM</strong></em>.
             Falando um pouco sobre minha vida, sou uma gamer de carteirinha, trader partial time, adoro assistir animes e series, 
@@ -31,20 +41,43 @@
             Irei atualizando esta página conforme for aprendendo novas features, tanto no curso quanto sozinha.
             <ol>
                 <li><a href="#dia1">18/11/2020</a></li>
+                <li><a href="#dia2">19/11/2020</a></li>
             </ol>
         </p>
-        <h3><a id="dia1">18/11/2020</a></h3>
+        <h3 class="subsection-title"><a id="dia1">18/11/2020</a></h3>
         <p>
             Hoje estou desenvolvendo minhas primeiras páginas web em HTML cru, sem cores, formatações ou animações conforme a imagem.
             Consigo criar listas, adicionar imagens e fazer links internos e externos. 
             Também já aprendemos sobre como funciona a Internet, Unix, Bash, 
-            como fazer versionamento utilizando Git e subir nossos trabalhos para o Github.<br>
+            como fazer versionamento utilizando Git e subir nossos trabalhos para o Github.
+        </p>
+        <p>
             Será mágico acompanhar a evolução que conseguirei com muito esforço e ajuda da Trybe. <strong>#VQV</strong><br>
-            <img src="dia1.png" width="1000px" alt="Home do portfólio no dia da criação"><br>
+        </p>
+            <!--Aqui uso tamanho em % e não em px a largura da imagem não ficar maior que a do texto e ficar visualmente feio e desalinhado-->
+            <img src="pics/dia1.png" class="center-img pic-frame" width="85%" alt="Home do portfólio no dia da criação">
+        <p class="pic-sub">
             Home do portfólio no dia da criação<br>
         </p>
-        <h2 id="skills">Habilidades</h2>
-        <h3 id="hard">Hard skills</h3>
+        <h3 class="subsection-title"><a id="dia2">19/11/2020</a></h3>
+        <p>
+            As coisas finalmente começam a tomar forma!
+        </p>
+        <p>
+            O conteúdo do dia foram os primeiros passos no uso de CSS nas páginas web, então cada pessoa estudante pôde iniciar o processo
+            de deixar seu portfólio com a sua cara. Ainda há muito conteúdo para aprender e botar em prática com essa linguagem,
+            mas a diferença já é tão nítida que quase já não parece o mesmo site de ontem haha.
+        </p>
+        <p>
+            Abaixo uma palhinha só para ter o "tchan" da mudança.
+        </p>
+            <img src="pics/dia2.1.png" class="center-img pic-frame" width="85%" alt="Portfólio dia 2 - imagem 1">
+            <img src="pics/dia2.2.png" class="center-img pic-frame" width="85%" alt="Portfólio dia 2 - imagem 1">
+        <p class="pic-sub">
+            Screenshots do porfólio no dia 2. Note como a imagem não tinha moldura no segundo screenshot.<br>
+        </p>
+        <h2 id="skills" class="section-title">Habilidades</h2>
+        <h3 id="hard" class="subsection-title">Hard skills</h3>
         <ul>
             <li>Controle de versões usando <em>Git</em>.</li>
             <li><strong>Desenvolvimento web: </strong>HTML5.</li>
@@ -53,19 +86,19 @@
             <li><strong>Idiomas: </strong>Inglês, espanho e alemão.</li>
             <li><strong>Outros: </strong>Programação em MQL5, análise técnica e  análise gráfica.</li>
         </ul>
-        <h3 id="soft">Soft skills</h3>
+        <h3 id="soft" class="subsection-title">Soft skills</h3>
         <ul>
             <li>Dinamicidade.</li>
             <li>Boa gestão.</li>
         </ul>
-        <h2 id="readings">Leituras recomendadas por mim =)</h2>
+        <h2 id="readings" class="section-title">Leituras recomendadas por mim =)</h2>
         <ul>
             <li><a href="https://www.alura.com.br/artigos" target="_blank">Alura</a></li>
             <li><a href="https://www.codigofonte.com.br/" target="_blank">Código Fonte TV</a></li>
             <li><a href="https://www.tradeciety.com/blog/" target="_blank">Tradeciety</a></li>
             <li><a href="https://mepoupenaweb.uol.com.br/" target="_blank">Blog Me Poupe!</a></li>
         </ul>
-        <h2 id="socialmedia">Redes sociais</h2>
+        <h2 id="socialmedia" class="section-title">Redes sociais</h2>
         <ul>
             <li><a href="https://www.linkedin.com/in/raquel-picanco" target="_blank">Linkedin</a></li>
             <li><a href="https://github.com/rach-vp" target="_blank">Github</a></li>

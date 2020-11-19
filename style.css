@@ -1,0 +1,61 @@
+/*Tag styles*/
+body {
+    background-color: #FCFFFD;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 16px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+p {
+    color: #2C363F;
+    text-align: justify;
+    text-indent: 50px;  /* Cria a identação do texto na primeira linha. como se fosse um TAB */
+}
+ul, ol {
+    color: #2C363F;
+    text-align: justify;
+}
+h1, h2, h3, h4 {
+    color: #05668D;
+}
+/*Class styles*/
+.main-name {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 50px;
+    font-weight: 500;
+    text-align: center;
+}
+.section-title {
+    text-align: center;
+    font-size: 30px;
+}
+.subsection-title {
+    text-decoration: underline;
+    font-size: 20px;
+}
+/* Tutorial para centralizar imagens no link abaixo */
+/* https://www.w3schools.com/howto/howto_css_image_center.asp */
+.center-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.pic-sub {
+    text-align: center;
+    text-indent: 0px;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.pic-frame {
+    border: 5px solid #05668D;
+    border-style: double;
+}
+.summary-li {
+    font-weight: 200;
+}
+.summary-subli {
+    font-weight: 200;
+    font-style: italic;
+}
+/*ID styles*/
