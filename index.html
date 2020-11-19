@@ -15,9 +15,13 @@
             body {
                 background-color: #FCFFFD;
                 font-family: 'PT Sans', sans-serif;
+                font-size: 16px;
+                margin-left: 100px;
+                margin-right: 100px;
             }
             p, ul, ol {
                 color: #2C363F;
+                text-align: justify;
             }
             h1, h2, h3, h4 {
                 color: #05668D;
@@ -26,14 +30,34 @@
             .main-name {
                 font-family: 'Ubuntu', sans-serif;
                 font-size: 50px;
-                font-weight: 700;
+                font-weight: 500;
+                text-align: center;
+            }
+            .section-title {
+                text-align: center;
+            }
+            .subsection-title {
+                text-decoration: underline;
+            }
+            /* Tutorial para centralizar imagens no link abaixo */
+            /* https://www.w3schools.com/howto/howto_css_image_center.asp */
+            .center-img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .pic-sub {
+                text-align: center;
+                font-size: 12px;
+                font-weight: bold;
+                text-decoration: underline;
             }
             /*ID styles*/
         </style>
     </head>
     <body>
-        <h1 class="main-name">Raquel Vicente Picanço</h1>
-        <h2>Sumário</h2>
+        <h1 id ="home" class="main-name">Raquel Vicente Picanço</h1>
+        <h2 class="section-title">Sumário</h2>
         <ol>
             <li><a href="#quem">Quem sou eu?</a></li>
             <li><a href="#skills">Habilidades</a></li>
@@ -44,34 +68,34 @@
             <li><a href="#readings">Leituras recomendadas</a></li>
             <li><a href="#socialmedia">Redes sociais</a></li>
         </ol>
-        <img id="home" src="profile-pic.jpeg" width="200px" alt="Minha foto de perfil. Raquel Vicente Picanço">
-        <h2 id="quem">Quem sou eu?</h2>
+        <h2 id="quem" class="section-title">Quem sou eu?</h2>
+        <img src="profile-pic.jpeg" width="200px" class="center-img" alt="Minha foto de perfil. Raquel Vicente Picanço">
         <p>
             Olá, tudo bem? =)<br>
             Sou Raquel, tenho <em><strong>24 anos</strong> anos</em>, sou casada e sou de/moro em 
             <em><strong>Manaus/AM</strong></em>.
             Falando um pouco sobre minha vida, sou uma gamer de carteirinha, trader partial time, adoro assistir animes e series, 
             viajar é minha paixão e meu melhor passatempo é estar com minha família.
-            Estou começando agora no mundo dos Devs e escolhi a Trybe para me guiar no início dessa estrada.
-        </p>
-        <p>
+            Estou começando agora no mundo dos Devs e escolhi a Trybe para me guiar no início dessa estrada.<br>
             Irei atualizando esta página conforme for aprendendo novas features, tanto no curso quanto sozinha.
             <ol>
                 <li><a href="#dia1">18/11/2020</a></li>
             </ol>
         </p>
-        <h3><a id="dia1">18/11/2020</a></h3>
+        <h3 class="subsection-title"><a id="dia1">18/11/2020</a></h3>
         <p>
             Hoje estou desenvolvendo minhas primeiras páginas web em HTML cru, sem cores, formatações ou animações conforme a imagem.
             Consigo criar listas, adicionar imagens e fazer links internos e externos. 
             Também já aprendemos sobre como funciona a Internet, Unix, Bash, 
             como fazer versionamento utilizando Git e subir nossos trabalhos para o Github.<br>
             Será mágico acompanhar a evolução que conseguirei com muito esforço e ajuda da Trybe. <strong>#VQV</strong><br>
-            <img src="dia1.png" width="1000px" alt="Home do portfólio no dia da criação"><br>
+        </p>
+            <img src="dia1.png" width="1000px" class="center-img" alt="Home do portfólio no dia da criação">
+        <p class="pic-sub">
             Home do portfólio no dia da criação<br>
         </p>
-        <h2 id="skills">Habilidades</h2>
-        <h3 id="hard">Hard skills</h3>
+        <h2 id="skills" class="section-title">Habilidades</h2>
+        <h3 id="hard" class="subsection-title">Hard skills</h3>
         <ul>
             <li>Controle de versões usando <em>Git</em>.</li>
             <li><strong>Desenvolvimento web: </strong>HTML5.</li>
@@ -80,19 +104,19 @@
             <li><strong>Idiomas: </strong>Inglês, espanho e alemão.</li>
             <li><strong>Outros: </strong>Programação em MQL5, análise técnica e  análise gráfica.</li>
         </ul>
-        <h3 id="soft">Soft skills</h3>
+        <h3 id="soft" class="subsection-title">Soft skills</h3>
         <ul>
             <li>Dinamicidade.</li>
             <li>Boa gestão.</li>
         </ul>
-        <h2 id="readings">Leituras recomendadas por mim =)</h2>
+        <h2 id="readings" class="section-title">Leituras recomendadas por mim =)</h2>
         <ul>
             <li><a href="https://www.alura.com.br/artigos" target="_blank">Alura</a></li>
             <li><a href="https://www.codigofonte.com.br/" target="_blank">Código Fonte TV</a></li>
             <li><a href="https://www.tradeciety.com/blog/" target="_blank">Tradeciety</a></li>
             <li><a href="https://mepoupenaweb.uol.com.br/" target="_blank">Blog Me Poupe!</a></li>
         </ul>
-        <h2 id="socialmedia">Redes sociais</h2>
+        <h2 id="socialmedia" class="section-title">Redes sociais</h2>
         <ul>
             <li><a href="https://www.linkedin.com/in/raquel-picanco" target="_blank">Linkedin</a></li>
             <li><a href="https://github.com/rach-vp" target="_blank">Github</a></li>
