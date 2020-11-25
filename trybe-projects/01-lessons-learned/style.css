@@ -1,0 +1,195 @@
+/* Tag styles */
+* {
+  margin: 0;
+}
+
+body {
+  background-color: rgb(253 , 251 , 251);
+  font-family: Patrick Hand, cursive;
+  font-size: 25px;
+}
+
+p {
+  line-height: 25px;
+  text-indent: 50px;
+  text-align: justify;
+}
+
+/* Class styles */
+.main-content {
+  position: absolute;
+  top: 17%;
+  bottom: 12%;
+  left: 0;
+  right: 0;
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.5% 3%;
+  overflow: auto;
+}
+
+.lessons {
+  overflow: auto;
+}
+
+.lado-esquerdo {
+  border: 2px dashed rgba(126 , 201 , 251);
+  float: left;
+  padding: 2%;
+  width: 40%;
+  margin-left: 3%;
+}
+
+.lado-direito {
+  border: 2px dashed rgb(253 , 165 , 0);
+  float: right;
+  padding: 2%;
+  width: 40%;
+  margin-right: 3%;
+}
+
+.sem-float {
+  margin-top: 20px;
+  padding: 2%;
+  width: 45%;
+  position: relative;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.footer-content-wrapper {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  overflow: auto;
+  min-height: 50px;
+  height: 100%;
+  width: 45%;
+  padding-left: 5%;
+  font-family: Satisfy, cursive;
+  color: rgb(25 , 63 , 123);
+  font-size: 25px;
+}
+
+.right-footer-content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.social-media-icon {
+  height: 25px;
+  margin-right: 10px;
+}
+
+.vertical-centralizer {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.aside-content {
+  float: right;
+  position: sticky;
+  top: 30%;
+  width: 45%;
+  margin-top: 20px;
+}
+
+.study-themes-table {
+  margin: 5px auto;
+}
+
+/* ID styles */
+#cabecalho {
+  background-color: rgba(126 , 201 , 251);
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  width: 75%;
+  height: 15%;
+  min-height: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 10px outset rgba(126 , 201 , 251 , 0.918);
+}
+
+#titulo {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 50px;
+  font-family: Satisfy, cursive;
+  color: rgb(25 , 63 , 124);
+}
+
+#minha_foto {
+  height: 100%;
+  right: 5%;
+  border-radius: 25%;
+}
+
+#licoes_aprendidas {
+  border: none; /* Colocado só pra parrar o erro no CC */
+}
+
+#licoes_a_aprender {
+  border: none; /* Colocado só pra parrar o erro no CC */
+}
+
+#rodape {
+  background-color: rgba(126 , 201 , 251);
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  width: 75%;
+  height: 10%;
+  min-height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 10px outset rgba(126 , 201 , 251 , 0.918);
+}
+
+/* Inherit styles */
+#rodape a:link {
+  color: rgb(25 , 63 , 124);
+}
+
+#rodape a:visited {
+  color: rgb(25 , 63 , 124);
+}
+
+#rodape a:hover {
+  background-color: rgba(0 , 152 , 253 , 0.692);
+}
+
+.main-content table , th , td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.study-themes-table th {
+  width: 200px;
+  background-color: rgba(126 , 201 , 251);
+}
+
+.aside-content p {
+  text-align: center;
+  font-size: 50px;
+  line-height: 60px;
+}
