@@ -98,6 +98,7 @@ body {
 
 .task {
   font-size: 3.5vh;
+  user-select: none;
 }
 
 .actions-container {
