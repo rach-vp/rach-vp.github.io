@@ -3,12 +3,12 @@ function highlight(event) {
   const clickedItem = event.target;
   const selectedTasks = document.querySelectorAll('.selected');
   if (selectedTasks.length < 1) {
-    clickedItem.className += ' selected';
+    clickedItem.classList.add('selected');
   } else if (selectedTasks[0] !== clickedItem) {
-    selectedTasks[0].className = selectedTasks[0].className.replace(' selected', '');
-    clickedItem.className += ' selected';
+    selectedTasks[0].classList.remove('selected');
+    clickedItem.classList.add('selected');
   } else {
-    clickedItem.className = clickedItem.className.replace(' selected', '');
+    clickedItem.classList.remove('selected');
   }
 }
 
@@ -23,11 +23,7 @@ function highlightListItemEvent() {
 // Risca tarefas já completadas
 function crossOrUncross(event) {
   const task = event.target;
-  if (task.className.includes('completed')) {
-    task.className = task.className.replace(' completed', '');
-  } else {
-    task.className += ' completed';
-  }
+  task.classList.toggle('completed');
 }
 
 function crossTask() {
@@ -36,6 +32,19 @@ function crossTask() {
     tasks[index].removeEventListener('dblclick', crossOrUncross);
     tasks[index].addEventListener('dblclick', crossOrUncross);
   }
+}
+
+function createListItem(task, className) {
+  const taskList = document.querySelector('#lista-tarefas');
+  const listItem = document.createElement('li');
+  const listItemSpan = document.createElement('span');
+  listItemSpan.innerText = task;
+  listItemSpan.className = className;
+  listItem.appendChild(listItemSpan);
+  taskList.appendChild(listItem);
+  highlightListItemEvent();
+  crossTask();
+  document.querySelector('#texto-tarefa').value = '';
 }
 
 window.onload = function () {
@@ -50,29 +59,18 @@ window.onload = function () {
     const classArray = JSON.parse(localStorage.getItem('taskListClasses'));
     const taskList = document.querySelector('#lista-tarefas');
     for (let index = 0; index < taskArray.length; index += 1) {
-      const task = document.createElement('li');
-      task.innerText = taskArray[index];
-      task.className = classArray[index];
-      taskList.appendChild(task);
-      highlightListItemEvent();
-      crossTask();
+      createListItem(taskArray[index], classArray[index]);
     }
   }
 };
 
 // Adicionar tarefas a lista ordenada #lista-tarefas
+
 function transferText(task) {
   if (task === '') {
     alert('Campo vazio!');
   } else {
-    const taskList = document.querySelector('#lista-tarefas');
-    const listItem = document.createElement('li');
-    listItem.innerText = task;
-    listItem.className = 'task';
-    taskList.appendChild(listItem);
-    highlightListItemEvent();
-    crossTask();
-    document.querySelector('#texto-tarefa').value = '';
+    createListItem(task, 'task');
   }
 }
 function addTask() {
@@ -100,7 +98,7 @@ function clearAll() {
     const taskList = document.querySelector('#lista-tarefas');
     const task = document.querySelectorAll('.task');
     for (let index = 0; index < task.length; index += 1) {
-      taskList.removeChild(task[index]);
+      taskList.removeChild(task[index].parentNode);
     }
     // Garante que, ao limpar a lista, ela não seja carregada novamente em uma nova sessão.
     if (localStorage.length > 0) {
@@ -120,7 +118,7 @@ function clearDoneItems() {
     const task = document.querySelectorAll('.task');
     for (let index = 0; index < task.length; index += 1) {
       if (task[index].className.includes('completed')) {
-        taskList.removeChild(task[index]);
+        taskList.removeChild(task[index].parentNode);
       }
     }
   });
@@ -137,7 +135,7 @@ function clearselectedItems() {
     const task = document.querySelectorAll('.task');
     for (let index = 0; index < task.length; index += 1) {
       if (task[index].className.includes('selected')) {
-        taskList.removeChild(task[index]);
+        taskList.removeChild(task[index].parentNode);
       }
     }
   });
@@ -196,3 +194,17 @@ function saveTasks() {
 }
 
 saveTasks();
+
+// Links do Github e do LinkedIn
+function socialMediaLink() {
+  const githubIcon = document.querySelector('.fa-github');
+  githubIcon.addEventListener('click', function () {
+    window.open('https://github.com/rach-vp', '_blank');
+  });
+  const linkedinIcon = document.querySelector('.fa-linkedin');
+  linkedinIcon.addEventListener('click', function () {
+    window.open('https://www.linkedin.com/in/raquel-pican%C3%A7o-384736107/', '_blank');
+  });
+}
+
+socialMediaLink();
