@@ -1,16 +1,5 @@
-/* Tag and WildCard Styles */
-* {
-  margin: 0;
-}
-
-/*
-
-Técnica para background full screen no link abaixo:
-
-https://css-tricks.com/perfect-full-page-background-image/
-
-*/
-html {
+/* Tag styles */
+body {
   background-image: url('pics/bg-image.jpg');
   background-repeat: no-repeat;
   background-position: center;
@@ -19,20 +8,10 @@ html {
 }
 
 /* Class styles */
-/*
-
-Uso de Viewport lengths fez a div main content ter sempre pelo menos o tamanho da tela. Possibilitando que os boxes não de sobrepusessem.
-Link com o material consultado abaixo:
-
-https://stackoverflow.com/questions/1575141/how-to-make-a-div-100-height-of-the-browser-window
-
-https://every-layout.dev/layouts/cover/
-
-*/
 .main-content {
   align-items: center;
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
   justify-content: space-around;
   min-height: 100vh;
 }
@@ -42,21 +21,49 @@ https://every-layout.dev/layouts/cover/
   box-shadow: 0 10px 6px -6px black;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   padding: 20px;
   width: 50%;
 }
 
-.color-palette-options {
-  display: flex;
-  justify-content: space-evenly;
+.main-title {
+  font-weight: 700;
+  font-size: 80px;
+  letter-spacing: 5px;
+  text-align: center;
+  font-family: Tangerine, cursive;
 }
 
-.color-palette-item {
-  font-size: 40px;
-  font-weight: 700;
-  list-style-type: none;
-  width: 100px;
-  font-family: 'Tangerine', cursive;
+.aim-description {
+  font-family: Balsamiq Sans, cursive;
+  font-size: 1.25em;
+  margin: 1em 0;
+  text-align: center;
+}
+
+.palette-size-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.palette-size-label {
+  font-family: Balsamiq Sans, cursive;
+  font-size: 1.25em;
+  margin: 1em 10px;
+}
+
+.palette-size-input {
+  font-size: 1.25em;
+  margin: 1em 10px;
+  width: 2em;
+}
+
+.color-palette-style {
+  margin: 1em 0;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .color {
@@ -65,6 +72,7 @@ https://every-layout.dev/layouts/cover/
   height: 50px;
   opacity: 1.0;
   width: 50px;
+  transition: all 300ms;
 }
 
 .black {
@@ -94,15 +102,39 @@ https://every-layout.dev/layouts/cover/
 .actions-container {
   align-items: center;
   display: flex;
-  flex-direction: column-reverse;
-  font-size: 30px;
-  font-family: 'Balsamiq Sans', cursive;
-  padding: 10px;
+  flex-direction: column;
+  font-size: 1.5em;
+  font-family: Balsamiq Sans, cursive;
   overflow: auto;
 }
 
-.actions-container-wraper {
-  margin: 0 0 10px 0;
+.customization-container {
+  margin: 0 0 1em 0;
+}
+
+.input-style {
+  font-size: 1em;
+  width: 2em;
+}
+
+.create-btn {
+  font-size: 20px;
+}
+
+.clear-btn {
+  font-family: Balsamiq Sans, cursive;
+  font-size: 1em;
+}
+
+.fa-eraser {
+  margin: 0 10px;
+}
+
+.pixel-board-style {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1em auto;
+  width: 210px;
 }
 
 .pixel {
@@ -112,46 +144,13 @@ https://every-layout.dev/layouts/cover/
   width: 40px;
 }
 
-/* ID styles */
-#title {
-  font-weight: 700;
-  font-size: 80px;
-  letter-spacing: 5px;
-  text-align: center;
-  font-family: 'Tangerine', cursive;
-}
-
-#color-palette {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-#clear-board {
-  font-size: 20px;
-  width: 100px;
-}
-
-#board-size {
-  font-size: 20px;
-  width: 50px;
-}
-
-#generate-board {
-  font-size: 20px;
-}
-
-#pixel-board {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
-  overflow: auto;
-  padding: 0;
-  width: 210px;
-
-}
-
 /* Inherit styles */
+button:hover {
+  cursor: pointer;
+}
 
-
+.color:hover {
+  cursor: pointer;
+  transform: scale(1.25);
+  transition: all 300ms;
+}
