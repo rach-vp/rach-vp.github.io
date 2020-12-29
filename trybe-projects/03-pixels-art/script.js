@@ -1,6 +1,6 @@
 window.onload = function () {
   const blackPixelPalette = document.querySelector('.black');
-  blackPixelPalette.className += ' selected';
+  blackPixelPalette.classList.add('selected');
 
   // Paleta de cores aleatória
   const colors = document.querySelectorAll('.color');
@@ -14,25 +14,21 @@ window.onload = function () {
 };
 
 // Pintando o pixel
-function changeColor(target, pixelColor) {
-  if (target.style.backgroundColor !== pixelColor) {
-    target.style.backgroundColor = pixelColor;
-  } else {
-    target.style.backgroundColor = 'white';
-  }
-}
-
-function eventFunction(event) {
+function changeColor(event) {
   const selectedColor = document.querySelector('.selected');
-  changeColor(event.target, window.getComputedStyle(selectedColor, null).getPropertyValue('background-color'));
+  if (event.target.style.backgroundColor !== selectedColor.style.backgroundColor) {
+    event.target.style.backgroundColor = selectedColor.style.backgroundColor;
+  } else {
+    event.target.style.backgroundColor = 'white';
+  }
 }
 
 function paintPixel() {
   const pixels = document.querySelectorAll('.pixel');
   for (let index = 0; index < pixels.length; index += 1) {
     const pixelClicked = pixels[index];
-    pixelClicked.removeEventListener('click', eventFunction);
-    pixelClicked.addEventListener('click', eventFunction);
+    pixelClicked.removeEventListener('click', changeColor);
+    pixelClicked.addEventListener('click', changeColor);
   }
 }
 
