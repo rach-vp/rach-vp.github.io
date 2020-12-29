@@ -132,6 +132,12 @@ function addColors(colorsAmount, colors, colorsPalette) {
   }
 }
 
+function removeColors(colorsAmount, colors, colorsPalette) {
+  while (colors.length > colorsAmount) {
+    colorsPalette.removeChild(colors[colors.length - 1]);
+    colors = document.querySelectorAll('.color');
+  }
+}
 function resizePalette(paletteSize) {
   const colorsPalette = document.querySelector('#color-palette')
   const colors = document.querySelectorAll('.color');
