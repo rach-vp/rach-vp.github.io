@@ -98,7 +98,7 @@ function clearAll() {
     const taskList = document.querySelector('#lista-tarefas');
     const task = document.querySelectorAll('.task');
     for (let index = 0; index < task.length; index += 1) {
-      taskList.removeChild(task[index]);
+      taskList.removeChild(task[index].parentNode);
     }
     // Garante que, ao limpar a lista, ela não seja carregada novamente em uma nova sessão.
     if (localStorage.length > 0) {
@@ -118,7 +118,7 @@ function clearDoneItems() {
     const task = document.querySelectorAll('.task');
     for (let index = 0; index < task.length; index += 1) {
       if (task[index].className.includes('completed')) {
-        taskList.removeChild(task[index]);
+        taskList.removeChild(task[index].parentNode);
       }
     }
   });
@@ -135,7 +135,7 @@ function clearselectedItems() {
     const task = document.querySelectorAll('.task');
     for (let index = 0; index < task.length; index += 1) {
       if (task[index].className.includes('selected')) {
-        taskList.removeChild(task[index]);
+        taskList.removeChild(task[index].parentNode);
       }
     }
   });
