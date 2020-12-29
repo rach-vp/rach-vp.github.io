@@ -150,10 +150,3 @@ button:hover {
   cursor: pointer;
 }
 
-a:link {
-  color: rgb(193 , 191 , 202);
-}
-
-a:visited {
-  color: rgb(193 , 191 , 202);
-}
