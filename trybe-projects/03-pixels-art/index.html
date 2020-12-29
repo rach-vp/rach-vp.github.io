@@ -14,34 +14,34 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="main-content">
-    <div class='palette-container'>
-      <header>
-        <h1 id="title" class = "main-title">Paleta de Cores</h1>
-      </header>
-      <article>
-        <p class="aim-description">Escolha uma cor e clique no pixel para criar uma obra de arte!</p>
-        </p>
-      </article>
-      <section class="palette-size-container">
-        <label for="palette-size" class="palette-size-label">Quantidade de cores:</label>
-        <input type="number" id="palette-size" class="palette-size-input" placeholder="4" min="4">
-        <button id="refresh-btn" class="refresh-btn-style"><em class="fas fa-redo"></em>Novas cores</button>
-      </section>
-      <nav id="color-palette" class="color-palette-style" aria-label="Paleta de cores">
-        <div class="color black"></div>
-        <div class="color color2"></div>
-        <div class="color color3"></div>
-        <div class="color color4"></div>
-      </nav>
-      <div class="actions-container">
-        <div class="customization-container">
-          <label for="task-input">Tamanho do quadro:</label>
-          <input type="number" id="board-size" class="input-style" placeholder="5" min="5" max="50">
-        </div>
-        <button id="clear-board" class="clear-btn"><em class="fas fa-eraser"></em>Limpar quadro</button>
+  <div class='palette-container'>
+    <header>
+      <h1 id="title" class = "main-title">Paleta de Cores</h1>
+    </header>
+    <article>
+      <p class="aim-description">Escolha uma cor e clique no pixel para criar uma obra de arte!</p>
+      </p>
+    </article>
+    <section class="palette-size-container">
+      <label for="palette-size" class="palette-size-label">Quantidade de cores:</label>
+      <input type="number" id="palette-size" class="palette-size-input" placeholder="4" min="4">
+      <button id="refresh-btn" class="refresh-btn-style"><em class="fas fa-redo"></em>Novas cores</button>
+    </section>
+    <nav id="color-palette" class="color-palette-style" aria-label="Paleta de cores">
+      <div class="color black"></div>
+      <div class="color color2"></div>
+      <div class="color color3"></div>
+      <div class="color color4"></div>
+    </nav>
+    <div class="actions-container">
+      <div class="customization-container">
+        <label for="task-input">Tamanho do quadro:</label>
+        <input type="number" id="board-size" class="input-style" placeholder="5" min="5" max="50">
       </div>
+      <button id="clear-board" class="clear-btn"><em class="fas fa-eraser"></em>Limpar quadro</button>
     </div>
+  </div>
+  <div class="secondary-div">
     <div class="board-container">
       <nav id="pixel-board" class="pixel-board-style" aria-label="Pixel board">
         <div class="pixel"></div>
@@ -71,7 +71,7 @@
         <div class="pixel"></div>
       </nav>
     </div>
-  </main>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
