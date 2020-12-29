@@ -74,7 +74,7 @@ body {
 }
 
 .task {
-  font-size: 3.5vh;
+  font-size: 2em;
   user-select: none;
 }
 
@@ -132,7 +132,7 @@ body {
 .btns-container button {
   background-color: transparent;
   border: none;
-  font-size: 2.5em;
+  font-size: 2em;
   margin: 10px;
   transition: all 300ms;
 }
