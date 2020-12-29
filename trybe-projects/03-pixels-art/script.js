@@ -38,10 +38,10 @@ paintPixel();
 function selectColor() {
   const colorPalette = document.querySelectorAll('.color');
   for (let index = 0; index < colorPalette.length; index += 1) {
-    colorPalette[index].addEventListener('click', function () {
+    colorPalette[index].addEventListener('click', function (event) {
       const selectedColor = document.querySelector('.selected');
-      selectedColor.className = selectedColor.className.replace(' selected', '');
-      colorPalette[index].className += ' selected';
+      selectedColor.classList.remove('selected');
+      event.target.classList.add('selected');
     });
   }
 }
