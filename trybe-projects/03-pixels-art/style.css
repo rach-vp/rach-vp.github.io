@@ -63,6 +63,7 @@ body {
 .color-palette-style {
   margin: 1em 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
 }
 
@@ -70,9 +71,10 @@ body {
   border: 1px solid black;
   border-radius: 50%;
   height: 50px;
+  margin: 5px;
   opacity: 1.0;
-  width: 50px;
   transition: all 300ms;
+  width: 50px;
 }
 
 .black {
