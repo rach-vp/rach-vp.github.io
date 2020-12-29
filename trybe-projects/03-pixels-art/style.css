@@ -60,6 +60,17 @@ body {
   width: 2em;
 }
 
+.refresh-btn-style {
+  font-family: Balsamiq Sans, cursive;
+  font-size: 1.25em;
+  margin: 1em 10px;
+
+}
+
+.fa-redo {
+  margin: 0 10px;
+}
+
 .color-palette-style {
   margin: 1em 0;
   display: flex;

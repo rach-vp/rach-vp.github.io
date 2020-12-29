@@ -5,6 +5,18 @@ function randomColor() {
   return `rgb(${rComponent}, ${gComponent}, ${bComponent})`;
 }
 
+function selectUnrepeatedColor(colors) {
+  bgColor = randomColor();
+  colorsArray = []
+  for (let index = 0; index < colors.length; index += 1) {
+    colorsArray.push();
+  }
+  while (colorsArray.includes(bgColor)) {
+    bgcolor = randomColor();
+  }
+  return bgColor;
+}
+
 window.onload = function () {
   const blackPixelPalette = document.querySelector('.black');
   blackPixelPalette.classList.add('selected');
@@ -12,7 +24,7 @@ window.onload = function () {
   // Paleta de cores aleatória
   const colors = document.querySelectorAll('.color');
   for (let index = 1; index < colors.length; index += 1) {
-    colors[index].style.backgroundColor = randomColor();
+    colors[index].style.backgroundColor = selectUnrepeatedColor(colors);
   }
 };
 
@@ -111,17 +123,6 @@ function changeSize() {
 changeSize();
 
 // Personaliza paleta de cores
-function selectUnrepeatedColor(colors) {
-  bgColor = randomColor();
-  colorsArray = []
-  for (let index = 0; index < colors.length; index += 1) {
-    colorsArray.push();
-  }
-  while (colorsArray.includes(bgColor)) {
-    bgcolor = randomColor();
-  }
-  return bgColor;
-}
 function addColors(colorsAmount, colors, colorsPalette) {
   while (colors.length < colorsAmount) {
     const newColor = document.createElement('div');
@@ -153,7 +154,20 @@ function updatePalette() {
   const paletteInput = document.querySelector('#palette-size');
   paletteInput.addEventListener('input', function () {
     resizePalette(paletteInput.value);
-  })
+  });
 }
 
 updatePalette();
+
+// Refresh da paleta de cores
+function refreshColors() {
+  const refreshBtn = document.querySelector('#refresh-btn');
+  refreshBtn.addEventListener('click', function () {
+    const colors = document.querySelectorAll('.color');
+    for (let index = 1; index < colors.length; index += 1) {
+      colors[index].style.backgroundColor = selectUnrepeatedColor(colors);
+    }
+  });
+}
+
+refreshColors();
