@@ -181,15 +181,19 @@ function saveTasks() {
   const saveTasksButton = document.querySelector('#salvar-tarefas');
   saveTasksButton.addEventListener('click', function () {
     const task = document.querySelectorAll('.task');
-    const taskArray = [];
-    const classArray = [];
-    for (let index = 0; index < task.length; index += 1) {
-      taskArray.push(task[index].innerText);
-      classArray.push(task[index].className);
+    if (task.length > 0) {
+      const taskArray = [];
+      const classArray = [];
+      for (let index = 0; index < task.length; index += 1) {
+        taskArray.push(task[index].innerText);
+        classArray.push(task[index].className);
+      }
+      localStorage.setItem('taskListNames', JSON.stringify(taskArray));
+      localStorage.setItem('taskListClasses', JSON.stringify(classArray));
+      alert('Lista salva com sucesso!');
+    } else {
+      alert('Lista de tarefas vazia!')
     }
-    localStorage.setItem('taskListNames', JSON.stringify(taskArray));
-    localStorage.setItem('taskListClasses', JSON.stringify(classArray));
-    alert('Lista salva com sucesso!');
   });
 }
 
