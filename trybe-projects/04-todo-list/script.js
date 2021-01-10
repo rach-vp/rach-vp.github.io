@@ -150,8 +150,8 @@ function moveUp() {
   moveUpButton.addEventListener('click', function () {
     const task = document.querySelectorAll('.task');
     for (let index = 0; index < task.length; index += 1) {
-      if (task[index].className.includes('selected') && task[index].previousSibling !== null) {
-        task[index].parentNode.insertBefore(task[index], task[index - 1]);
+      if (task[index].className.includes('selected') && task[index].parentNode.previousSibling !== null) {
+        task[index].parentNode.parentNode.insertBefore(task[index].parentNode, task[index - 1].parentNode);
       }
     }
   });
@@ -166,8 +166,8 @@ function moveDown() {
   moveDownButton.addEventListener('click', function () {
     const task = document.querySelectorAll('.task');
     for (let index = 0; index < task.length; index += 1) {
-      if (task[index].className.includes('selected') && task[index].nextSibling !== null) {
-        task[index].parentNode.insertBefore(task[index + 1], task[index]);
+      if (task[index].className.includes('selected') && task[index].parentNode.nextSibling !== null) {
+        task[index].parentNode.parentNode.insertBefore(task[index + 1].parentNode, task[index].parentNode);
       }
     }
   });
