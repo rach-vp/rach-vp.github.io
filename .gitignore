@@ -1,0 +1,18 @@
+*.txt
+
+# Created by https://www.toptal.com/developers/gitignore/api/code,sass
+# Edit at https://www.toptal.com/developers/gitignore?templates=code,sass
+
+### Code ###
+.vscode/*
+!.vscode/tasks.json
+!.vscode/launch.json
+*.code-workspace
+
+### Sass ###
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+
+# End of https://www.toptal.com/developers/gitignore/api/code,sass
