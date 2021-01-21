@@ -43,7 +43,17 @@
                 <input type="text" id="phone_email" name="phone_email" placeholder="Celular ou email">
                 <input type="password" id="password" name="password" placeholder="Nova senha">
                 <label for="birthdate" id="label-birthdate">Data de nascimento</label>
-                <input type="text" name="birthdate" id="birthdate" placeholder="dd/mm/aaaa">
+                <div class="form-wrapper">
+                    <select name="birth-day" id="birth-day">
+                        <option value="">Dia</option>
+                    </select>
+                    <select name="birth-month" id="birth-month">
+                        <option value="">Mês</option>
+                    </select>
+                    <select name="birth-year" id="birth-year">
+                        <option value="">Ano</option>
+                    </select>
+                </div>
                 <label id="label-gender">Gênero</label>
                 <div class="form-wrapper">
                     <label for="female"><input type="radio" name="gender" id="female" value="Feminino">Feminino</label>

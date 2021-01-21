@@ -76,6 +76,19 @@
     margin: 0.5em 0;
   }
 
+  .form-wrapper:nth-child(5) {
+    display: flex;
+
+    select {
+      background-color: white;
+      border: 1px solid #BDC7D8;
+      outline: none;
+      padding: 0.5em;
+      margin-bottom: 0.5em;
+    }
+
+  }
+
   .form-wrapper:nth-child(7) {
     display: flex;
     flex-wrap: wrap;
@@ -100,6 +113,7 @@
     font-size: 1.1em;
     font-weight: 700;
     margin: 1.5em 0;
+    outline: none;
     padding: 0.5em;
     text-shadow: 1px 1px 1px black;
     width: 50%;

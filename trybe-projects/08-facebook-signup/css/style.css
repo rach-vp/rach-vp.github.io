@@ -103,6 +103,14 @@
     color: #90949C;
     font-weight: 700;
     margin: 0.5em 0; }
+  .signup-form .form-wrapper:nth-child(5) {
+    display: flex; }
+    .signup-form .form-wrapper:nth-child(5) select {
+      background-color: white;
+      border: 1px solid #BDC7D8;
+      outline: none;
+      padding: 0.5em;
+      margin-bottom: 0.5em; }
   .signup-form .form-wrapper:nth-child(7) {
     display: flex;
     flex-wrap: wrap; }
@@ -120,6 +128,7 @@
     font-size: 1.1em;
     font-weight: 700;
     margin: 1.5em 0;
+    outline: none;
     padding: 0.5em;
     text-shadow: 1px 1px 1px black;
     width: 50%; }
