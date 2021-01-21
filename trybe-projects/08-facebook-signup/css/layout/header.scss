@@ -6,7 +6,7 @@
 .topbar-container{
   align-items: center;
   display: flex;
-  min-height: 75px;
+  min-height: $top-bar-min-height;
   justify-content: space-between;
   @include min-lateral-padding;
 }

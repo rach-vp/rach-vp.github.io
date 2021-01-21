@@ -1,14 +1,34 @@
 .main-content {
+  background: linear-gradient(to bottom, white, #D3D8E8);
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 2em;
+  @include min-lateral-padding(16%);
 }
 
 .left-content {
-  width: 800px;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+
+  p {
+    align-items: flex-start;
+    color: #0E3860;
+    font-size: 1.25em;
+    font-weight: 700;
+    line-height: 1.5em;
+    padding: 0 15% 0 0;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
 }
 
 .right-content {
-  width: 300px;
+
 }
 
 .form-wrapper {
