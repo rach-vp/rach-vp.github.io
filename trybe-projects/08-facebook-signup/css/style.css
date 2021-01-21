@@ -42,7 +42,7 @@
   .form-group input {
     border: 1px solid #1D2A5B;
     height: 1.5em;
-    width: 12em; }
+    width: 10.5em; }
   .form-group span {
     color: #95B4D8;
     margin-top: 5px; }
@@ -54,9 +54,9 @@
   background: linear-gradient(to bottom, white, #D3D8E8);
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 2em;
-  padding: 0 16%; }
+  justify-content: space-between;
+  margin-top: 1.5em;
+  padding: 0 17.5%; }
 
 .left-content {
   display: flex;
@@ -103,11 +103,14 @@
     color: #90949C;
     font-weight: 700;
     margin: 0.5em 0; }
-  .signup-form .form-wrapper:nth-child(7) label {
-    font-size: 1.1em;
-    margin-right: 1.1em; }
-  .signup-form .form-wrapper:nth-child(7) label:last-child {
-    margin-right: 0; }
+  .signup-form .form-wrapper:nth-child(7) {
+    display: flex;
+    flex-wrap: wrap; }
+    .signup-form .form-wrapper:nth-child(7) label {
+      font-size: 1.1em;
+      margin: 0.25em 0.75em 0.25em 0; }
+    .signup-form .form-wrapper:nth-child(7) label:last-child {
+      margin-right: 0; }
   .signup-form button {
     background: linear-gradient(to bottom, #69AE56, #578843);
     border: 1px solid #3B6E22;
