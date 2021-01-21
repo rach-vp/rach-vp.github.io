@@ -1,25 +1,54 @@
 .top-bar {
-  align-items: center;
   background: linear-gradient(to bottom, #4D68A1, #3B5998);
-  border: 3px solid #3B5998;
+  border: 3px solid #3B5998; }
+
+.topbar-container {
+  align-items: center;
   display: flex;
-  height: 82px;
+  min-height: 75px;
   justify-content: space-between;
-  max-width: 100%; }
+  padding: 0 15%; }
 
 .facebook-logo {
-  align-self: flex-end;
-  height: 85%; }
+  align-self: center;
+  cursor: pointer;
+  height: 75px; }
 
 .facebook-login {
-  display: flex; }
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.75em; }
+  .facebook-login button {
+    align-self: center;
+    background-color: #4267B2;
+    border: 1px solid #2E4E86;
+    border-radius: 2px;
+    color: white;
+    font-family: arial;
+    font-size: 1em;
+    font-weight: 700;
+    padding: 0.3em 0.6em; }
+    .facebook-login button:hover {
+      background-color: #3B5998;
+      cursor: pointer; }
 
 .form-group {
   display: flex;
-  flex-direction: column; }
-
-.form-control {
-  align-self: flex-end; }
+  flex-direction: column;
+  margin: 0 0.5em; }
+  .form-group label {
+    color: white;
+    margin-bottom: 5px; }
+  .form-group input {
+    border: 1px solid #1D2A5B;
+    height: 1.5em;
+    width: 12em; }
+  .form-group span {
+    color: #95B4D8;
+    margin-top: 5px; }
+    .form-group span:hover {
+      cursor: pointer;
+      text-decoration: underline; }
 
 .main-content {
   display: flex;
@@ -40,6 +69,7 @@
 
 body {
   box-sizing: border-box;
+  font-family: arial;
   margin: 0;
   padding: 0; }
 

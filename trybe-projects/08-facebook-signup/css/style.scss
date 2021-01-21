@@ -1,8 +1,12 @@
+@import 'helpers/variables';
+@import 'helpers/mixins';
+
 @import 'layout/header';
 @import 'layout/main';
 
 body {
   box-sizing: border-box;
+  font-family: arial;
   margin: 0;
   padding: 0;
 }
