@@ -15,6 +15,10 @@
   @media (max-width: 768px) {
     .topbar-container {
       padding: 0 10%; } }
+  @media (max-width: 425px) {
+    .topbar-container {
+      padding: 0 5%;
+      flex-direction: column; } }
 
 .facebook-logo {
   align-self: center;
@@ -25,6 +29,10 @@
   display: flex;
   flex-wrap: wrap;
   font-size: 0.75em; }
+  @media (max-width: 425px) {
+    .facebook-login {
+      flex-direction: column;
+      font-size: 1em; } }
   .facebook-login button {
     align-self: center;
     background-color: #4267B2;
@@ -34,7 +42,11 @@
     font-family: arial;
     font-size: 1em;
     font-weight: 700;
-    padding: 0.3em 0.6em; }
+    padding: 0.3em 0.6em;
+    margin: 0.5em 0; }
+    @media (max-width: 425px) {
+      .facebook-login button {
+        width: 75%; } }
     .facebook-login button:hover {
       background-color: #3B5998;
       cursor: pointer; }
@@ -43,6 +55,9 @@
   display: flex;
   flex-direction: column;
   margin: 0 0.5em; }
+  @media (max-width: 320px) {
+    .form-group {
+      margin-bottom: 0.25em; } }
   .form-group label {
     color: white;
     margin-bottom: 5px; }
@@ -50,6 +65,9 @@
     border: 1px solid #1D2A5B;
     height: 1.5em;
     width: 10.5em; }
+    @media (max-width: 425px) {
+      .form-group input {
+        width: 100%; } }
   .form-group span {
     color: #95B4D8;
     margin-top: 5px; }
@@ -89,6 +107,9 @@
     font-weight: 700;
     line-height: 1.5em;
     padding: 0 15% 0 0; }
+    @media (max-width: 768px) {
+      .left-content p {
+        padding: 0; } }
   .left-content img {
     width: 100%; }
 

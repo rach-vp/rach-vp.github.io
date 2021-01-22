@@ -36,6 +36,11 @@
     font-weight: 700;
     line-height: 1.5em;
     padding: 0 15% 0 0;
+
+    @media (max-width: 768px) {
+      padding: 0;
+    }
+
   }
 
   img {
