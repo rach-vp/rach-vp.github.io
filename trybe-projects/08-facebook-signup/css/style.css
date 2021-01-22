@@ -1,0 +1,205 @@
+.top-bar {
+  background: linear-gradient(to bottom, #4D68A1, #3B5998);
+  border: 3px solid #3B5998;
+  padding-top: 0.5em; }
+
+.topbar-container {
+  align-items: center;
+  display: flex;
+  min-height: 75px;
+  justify-content: space-between;
+  padding: 0 18.5%; }
+  @media (max-width: 1200px) {
+    .topbar-container {
+      padding: 0 15%; } }
+  @media (max-width: 768px) {
+    .topbar-container {
+      padding: 0 10%; } }
+  @media (max-width: 425px) {
+    .topbar-container {
+      padding: 0 5%;
+      flex-direction: column; } }
+
+.facebook-logo {
+  align-self: center;
+  cursor: pointer;
+  height: 75px; }
+
+.facebook-login {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.75em; }
+  @media (max-width: 425px) {
+    .facebook-login {
+      flex-direction: column;
+      font-size: 1em; } }
+  .facebook-login button {
+    align-self: center;
+    background-color: #4267B2;
+    border: 1px solid #2E4E86;
+    border-radius: 2px;
+    color: white;
+    font-family: arial;
+    font-size: 1em;
+    font-weight: 700;
+    padding: 0.3em 0.6em;
+    margin: 0.5em 0; }
+    @media (max-width: 425px) {
+      .facebook-login button {
+        width: 75%; } }
+    .facebook-login button:hover {
+      background-color: #3B5998;
+      cursor: pointer; }
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0.5em; }
+  @media (max-width: 320px) {
+    .form-group {
+      margin-bottom: 0.25em; } }
+  .form-group label {
+    color: white;
+    margin-bottom: 5px; }
+  .form-group input {
+    border: 1px solid #1D2A5B;
+    height: 1.5em;
+    width: 10.5em; }
+    @media (max-width: 425px) {
+      .form-group input {
+        width: 100%; } }
+  .form-group span {
+    color: #95B4D8;
+    margin-top: 5px; }
+    .form-group span:hover {
+      cursor: pointer;
+      text-decoration: underline; }
+
+.main-content {
+  background: linear-gradient(to bottom, white, #D3D8E8);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 1.5em;
+  padding: 0 18.5%; }
+  @media (max-width: 1200px) {
+    .main-content {
+      padding: 0 15%; } }
+  @media (max-width: 768px) {
+    .main-content {
+      padding: 0 5%;
+      align-items: center;
+      flex-direction: column; } }
+
+.left-content {
+  display: flex;
+  flex-direction: column;
+  width: 55%; }
+  @media (max-width: 768px) {
+    .left-content {
+      align-items: center;
+      text-align: center;
+      width: 100%; } }
+  .left-content p {
+    align-items: flex-start;
+    color: #0E3860;
+    font-size: 1.25em;
+    font-weight: 700;
+    line-height: 1.5em;
+    padding: 0 15% 0 0; }
+    @media (max-width: 768px) {
+      .left-content p {
+        padding: 0; } }
+  .left-content img {
+    width: 100%; }
+
+.right-content {
+  color: #333333;
+  width: 42.5%; }
+  @media (max-width: 768px) {
+    .right-content {
+      width: 100%;
+      align-items: center; } }
+  .right-content h1 {
+    font-size: 2.25em;
+    font-weight: 700; }
+  .right-content p {
+    font-size: 1.25em;
+    margin: 1em 0; }
+
+.signup-form {
+  display: flex;
+  flex-direction: column; }
+  .signup-form input[type="text"], .signup-form input[type="password"] {
+    border: 1px solid #BDC7D8;
+    border-radius: 5px;
+    font-size: 1.1em;
+    padding: 0.5em;
+    margin-bottom: 0.5em; }
+  .signup-form ::placeholder {
+    color: #999999; }
+  .signup-form .form-wrapper:nth-child(1) {
+    display: flex;
+    justify-content: space-between; }
+    .signup-form .form-wrapper:nth-child(1) input {
+      width: 44%; }
+  .signup-form > label {
+    color: #90949C;
+    font-weight: 700;
+    margin: 0.5em 0; }
+  .signup-form .form-wrapper:nth-child(5) {
+    display: flex; }
+    .signup-form .form-wrapper:nth-child(5) select {
+      background-color: white;
+      border: 1px solid #BDC7D8;
+      outline: none;
+      padding: 0.5em;
+      margin-bottom: 0.5em; }
+  .signup-form .form-wrapper:nth-child(7) {
+    display: flex;
+    flex-wrap: wrap; }
+    .signup-form .form-wrapper:nth-child(7) label {
+      font-size: 1.1em;
+      margin: 0.25em 0.75em 0.25em 0; }
+    .signup-form .form-wrapper:nth-child(7) label:last-child {
+      margin-right: 0; }
+  .signup-form p:nth-child(8), .signup-form p:last-child {
+    color: #807D7A;
+    font-size: 0.75em;
+    line-height: 1.25em;
+    width: 90%; }
+    .signup-form p:nth-child(8) a, .signup-form p:last-child a {
+      color: #3B5998;
+      text-decoration: none; }
+      .signup-form p:nth-child(8) a:hover, .signup-form p:last-child a:hover {
+        text-decoration: underline; }
+  .signup-form p:last-child {
+    color: #666666;
+    font-size: 0.8em;
+    font-weight: 700;
+    margin-bottom: 4em; }
+  .signup-form button {
+    background: linear-gradient(to bottom, #69AE56, #578843);
+    border: 1px solid #3B6E22;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 1px #9CDC81;
+    color: white;
+    font-size: 1.1em;
+    font-weight: 700;
+    margin: 1.5em 0;
+    outline: none;
+    padding: 0.5em;
+    text-shadow: 1px 1px 1px black;
+    width: 50%; }
+    .signup-form button:hover {
+      cursor: pointer;
+      background: linear-gradient(to bottom, #69AE56 25%, #578843); }
+
+body {
+  box-sizing: border-box;
+  font-family: arial;
+  height: 100vh;
+  margin: 0;
+  padding: 0; }
+
+/*# sourceMappingURL=style.css.map */
