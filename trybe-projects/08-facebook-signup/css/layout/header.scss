@@ -1,6 +1,7 @@
 .top-bar {
   background: linear-gradient(to bottom, #4D68A1, $fb-blue);
   border: 3px solid $fb-blue;
+  padding-top: 0.5em;
 }
 
 .topbar-container{
@@ -9,6 +10,15 @@
   min-height: $top-bar-min-height;
   justify-content: space-between;
   @include min-lateral-padding;
+
+  @media (max-width: 1200px) {
+    @include min-lateral-padding(15%);
+  }
+
+  @media (max-width: 768px) {
+    @include min-lateral-padding(10%);
+  }
+
 }
 
 .facebook-logo {

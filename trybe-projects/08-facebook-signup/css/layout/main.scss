@@ -5,12 +5,29 @@
   justify-content: space-between;
   margin-top: 1.5em;
   @include min-lateral-padding;
+
+  @media (max-width: 1200px) {
+    @include min-lateral-padding(15%);
+  }
+
+  @media (max-width: 768px) {
+    @include min-lateral-padding(5%);
+    align-items: center;
+    flex-direction: column;
+  }
+
 }
 
 .left-content {
   display: flex;
   flex-direction: column;
   width: 55%;
+
+  @media (max-width: 768px) {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
 
   p {
     align-items: flex-start;
@@ -22,7 +39,7 @@
   }
 
   img {
-    height: 30vh;
+    width: 100%;
   }
 
 }
@@ -30,6 +47,11 @@
 .right-content {
   color: #333333;
   width: 42.5%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    align-items: center;
+  }
 
   h1 {
     font-size: 2.25em;
