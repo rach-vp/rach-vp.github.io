@@ -1,0 +1,44 @@
+.item {
+  border: 2px solid transparent;
+  border-radius: 5px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: $card-height;
+  margin: 5px;
+  padding: 1em;
+  width: 250px;
+
+  &:hover {
+    border: 2px solid #999999;
+  }
+
+}
+
+.item__sku {
+  display: none;
+}
+
+.item__title {
+  flex-grow: 1;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.item__image {
+  margin: 10px 0;
+  width: 100%;
+}
+
+.item__add {
+  background-color: #00ac00;
+  border: none;
+  border-radius: 5px;
+  color: $text-on-p;
+  cursor: pointer;
+  font-family: $font;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+  padding: 0.75em;
+}

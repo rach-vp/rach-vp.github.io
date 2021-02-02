@@ -4,9 +4,9 @@
   box-sizing: border-box;
   color: $text-on-p;
   display: flex;
-  font-family: $font;
   justify-content: space-between;
-  padding: 1.5em 3em;
+  margin-bottom: 1em;
+  padding: 1.5rem 3rem;
   width: 100%;
 }
 
@@ -28,5 +28,5 @@
   justify-content: center;
   outline: none;
   width: 3rem;
-  -webkit-text-stroke: 1.5px black;
+  -webkit-text-stroke: 1.5px #444444;
 }
