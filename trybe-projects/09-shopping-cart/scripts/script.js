@@ -1,10 +1,10 @@
 const search = (url, query) => url.replace('$QUERY', query);
-const sumSpan = document.querySelector('.total-price');
+const sumSpan = document.querySelector('.cart__price');
 const emptyCartButton = document.querySelector('.empty-cart');
 const cart = document.querySelector('.cart__items');
 const showCartButton = document.querySelector('.show-cart-button');
 const cartSection = document.querySelector('.cart');
-const closeCartButton = document.querySelector('.cart__header--close');
+const closeCartButton = document.querySelector('.cart__close');
 
 async function updateSumOfPrices() {
   const items = Array.from(document.querySelectorAll('.cart__item'));
@@ -12,7 +12,7 @@ async function updateSumOfPrices() {
     const text = item.innerText;
     return parseFloat(text.substring(text.indexOf('$') + 1));
   }).reduce((acc, price) => acc + price, 0);
-  sumSpan.innerText = !sum ? 'Seu carrinho está vazio' : `${Math.round(sum * 100) / 100}`;
+  sumSpan.innerText = !sum ? 'Seu carrinho está vazio' : `R$${(Math.round(sum * 100) / 100).toFixed(2)}`;
 }
 
 emptyCartButton.addEventListener('click', () => {
@@ -37,7 +37,6 @@ async function fetchAds(query) {
     return undefined;
   }
 }
-
 
 function createProductImageElement(imageSource) {
   const img = document.createElement('img');
@@ -76,7 +75,7 @@ function cartItemClickListener(event) {
 function createCartItemElement({ id: sku, title: name, price: salePrice }) {
   const li = document.createElement('li');
   li.className = 'cart__item';
-  li.innerText = `SKU: ${sku} | NAME: ${name} | PRICE: $${salePrice}`;
+  li.innerText = `SKU: ${sku} | NAME: ${name} | PRICE: R$${parseFloat(salePrice).toFixed(2)}`;
   li.addEventListener('click', cartItemClickListener);
   return li;
 }
