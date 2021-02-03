@@ -1,4 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+.prev-button, .next-button {
+  background-color: transparent;
+  border: none;
+  color: #999999;
+  font-size: 3rem;
+  outline: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); }
+  .prev-button:hover, .next-button:hover {
+    color: #444444; }
+  @media screen and (max-width: 768px) {
+    .prev-button, .next-button {
+      color: #444444; } }
+
 body {
   box-sizing: border-box;
   height: 100vh;
@@ -70,22 +85,18 @@ button {
   width: 100%; }
 
 .carousel {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 90%; }
+  position: relative;
+  width: 90%;
+  box-sizing: border-box; }
 
-.prev-button, .next-button {
-  background-color: transparent;
-  border: none;
-  color: #999999;
-  font-size: 3rem;
-  outline: none; }
-  .prev-button:hover, .next-button:hover {
-    color: #444444; }
-  @media screen and (max-width: 768px) {
-    .prev-button, .next-button {
-      color: #444444; } }
+.items {
+  width: 95%; }
+
+.prev-button {
+  left: 0; }
+
+.next-button {
+  right: 0; }
 
 .item {
   border: 2px solid transparent;

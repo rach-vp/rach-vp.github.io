@@ -5,24 +5,21 @@
 }
 
 .carousel {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: relative;
   width: 90%;
+  box-sizing: border-box;
 }
 
-.prev-button, .next-button {
-  background-color: transparent;
-  border: none;
-  color: #999999;
-  font-size: 3rem;
-  outline: none;
+.items {
+  width: 95%;
+}
 
-  &:hover {
-    color: #444444;
-  }
+.prev-button {
+  @extend %arrow-style;
+  left: 0;
+}
 
-  @media screen and (max-width: 768px) {
-    color: #444444;
-  }
+.next-button {
+  @extend %arrow-style;
+  right: 0;
 }

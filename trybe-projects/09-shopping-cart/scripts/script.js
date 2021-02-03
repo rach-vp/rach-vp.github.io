@@ -153,6 +153,8 @@ function formatCarousel() {
       prev: '.prev-button',
       next: '.next-button',
     },
+    dots: '.carousel-dots',
+    rewind: true,
   }
   config.responsive = breakpoints;
 
