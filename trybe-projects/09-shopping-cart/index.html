@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="assets/cart.ico" type="image/x-icon">
     <title>TrybeTech Online Store</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <link rel="stylesheet" href="./node_modules/glider-js/glider.min.css">
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -17,9 +18,9 @@
     </header>
     <section class="container">
       <div class="carousel">
-        <button class="prev-button"><i class="fas fa-caret-left"></i></button>
+        <button aria-label="Previous" class="prev-button"><i class="fas fa-caret-left"></i></button>
         <section class="items"></section>
-        <button class="next-button"><i class="fas fa-caret-right"></i></button>
+        <button aria-label="Next" class="next-button"><i class="fas fa-caret-right"></i></button>
       </div>
       <section class="cart">
         <span class="cart__title">Carrinho de compras</span>
@@ -28,7 +29,8 @@
         <ol class="cart__items"></ol>
       </section>
     </section>
+    <script src="node_modules/glider-js/glider.min.js"></script>
     <script src="scripts/script.js"></script>
-    <script src="scripts/carousel.js"></script>
+    <!-- <script src="scripts/carousel.js"></script> -->
   </body>
 </html>

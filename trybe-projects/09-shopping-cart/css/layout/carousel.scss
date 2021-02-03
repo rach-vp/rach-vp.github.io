@@ -13,16 +13,16 @@
 
 .prev-button, .next-button {
   background-color: transparent;
-  font-size: 3rem;
   border: none;
+  color: #999999;
+  font-size: 3rem;
   outline: none;
-}
 
-.items {
-  height: ($card-height + 15px);
-  overflow: hidden;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  &:hover {
+    color: #444444;
+  }
+
+  @media screen and (max-width: 768px) {
+    color: #444444;
+  }
 }

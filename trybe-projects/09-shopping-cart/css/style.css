@@ -77,17 +77,15 @@ button {
 
 .prev-button, .next-button {
   background-color: transparent;
-  font-size: 3rem;
   border: none;
+  color: #999999;
+  font-size: 3rem;
   outline: none; }
-
-.items {
-  height: 415px;
-  overflow: hidden;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around; }
+  .prev-button:hover, .next-button:hover {
+    color: #444444; }
+  @media screen and (max-width: 768px) {
+    .prev-button, .next-button {
+      color: #444444; } }
 
 .item {
   border: 2px solid transparent;
@@ -98,7 +96,7 @@ button {
   height: 400px;
   margin: 5px;
   padding: 1em;
-  width: 250px; }
+  width: 200px; }
   .item:hover {
     border: 2px solid #999999; }
 

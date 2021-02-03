@@ -2,8 +2,6 @@ const search = (url, query) => url.replace('$QUERY', query);
 const sumSpan = document.querySelector('.total-price');
 const emptyCartButton = document.querySelector('.empty-cart');
 const cart = document.querySelector('.cart__items');
-const prevButton = document.querySelector('.prev-button');
-const nextButton = document.querySelector('.next-button');
 
 async function updateSumOfPrices() {
   const items = Array.from(document.querySelectorAll('.cart__item'));
@@ -115,13 +113,60 @@ function loadShoppingCart() {
   });
 }
 
+function formatCarousel() {
+  const breakpoints = [
+      {
+        breakpoint: 475,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        }
+      },
+      {
+        breakpoint: 700,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        }
+      },
+      {
+        breakpoint: 935,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4,
+        }
+      },
+      {
+        breakpoint: 1175,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 5,
+        }
+      }
+  ];
+
+  const config = {
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    draggable: true,
+    arrows: {
+      prev: '.prev-button',
+      next: '.next-button',
+    },
+  }
+  config.responsive = breakpoints;
+
+  new Glider(document.querySelector('.items'), config)
+}
+
 window.onload = async function onload() {
   updateSumOfPrices();
   const ads = await fetchAds('computador');
   ads.forEach((ad) => {
-    const newSection = createProductItemElement(ad);
-    document.querySelector('.items').appendChild(newSection);
+    const newCard = createProductItemElement(ad);
+    document.querySelector('.items').appendChild(newCard);
   });
+  formatCarousel();
   document.querySelectorAll('.item__add').forEach(item =>
     item.addEventListener('click', addItemToCart));
   if (localStorage.length) loadShoppingCart();
