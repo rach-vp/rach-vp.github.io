@@ -2,6 +2,9 @@ const search = (url, query) => url.replace('$QUERY', query);
 const sumSpan = document.querySelector('.total-price');
 const emptyCartButton = document.querySelector('.empty-cart');
 const cart = document.querySelector('.cart__items');
+const showCartButton = document.querySelector('.show-cart-button');
+const cartSection = document.querySelector('.cart');
+const closeCartButton = document.querySelector('.cart__header--close');
 
 async function updateSumOfPrices() {
   const items = Array.from(document.querySelectorAll('.cart__item'));
@@ -182,3 +185,22 @@ window.onload = async function onload() {
   updateSumOfPrices();
   removeLoader();
 };
+
+function hideCart () {
+  cartSection.classList.replace('cart__visible', 'cart__hidden');
+  document.body.removeChild(document.body.firstChild);
+}
+
+function createBluredDiv() {
+  const bluredDiv = document.createElement('div');
+  bluredDiv.className = 'blured';
+  bluredDiv.addEventListener('click', hideCart)
+  document.body.prepend(bluredDiv);
+}
+
+showCartButton.addEventListener('click', () => {
+  createBluredDiv();
+  cartSection.classList.replace('cart__hidden', 'cart__visible');
+});
+
+closeCartButton.addEventListener('click', hideCart);
