@@ -50,13 +50,14 @@ function createCustomElement(element, className, innerText) {
   return e;
 }
 
-function createProductItemElement({ id: sku, title: name, thumbnail: image }) {
+function createProductItemElement({ id: sku, title: name, thumbnail: image, price }) {
   const section = document.createElement('section');
   section.className = 'item';
 
   section.appendChild(createProductImageElement(image));
   section.appendChild(createCustomElement('span', 'item__sku', sku));
   section.appendChild(createCustomElement('span', 'item__title', name));
+  section.appendChild(createCustomElement('span', 'item__price', price));
   section.appendChild(createCustomElement('button', 'item__add', 'Adicionar ao carrinho!'));
 
   return section;
@@ -161,6 +162,11 @@ function formatCarousel() {
   new Glider(document.querySelector('.items'), config)
 }
 
+function formatPrices() {
+  const adPrices = document.querySelectorAll('.item__price');
+  adPrices.forEach(price => price.innerText = `R$${parseFloat(price.innerText).toFixed(2)}`);
+}
+
 window.onload = async function onload() {
   updateSumOfPrices();
   const ads = await fetchAds('computador');
@@ -168,6 +174,7 @@ window.onload = async function onload() {
     const newCard = createProductItemElement(ad);
     document.querySelector('.items').appendChild(newCard);
   });
+  formatPrices();
   formatCarousel();
   document.querySelectorAll('.item__add').forEach(item =>
     item.addEventListener('click', addItemToCart));
