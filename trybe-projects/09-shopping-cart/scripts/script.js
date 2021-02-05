@@ -5,6 +5,7 @@ const cart = document.querySelector('.cart__items');
 const showCartButton = document.querySelector('.show-cart-button');
 const cartSection = document.querySelector('.cart');
 const closeCartButton = document.querySelector('.cart__close');
+const cartCount = document.querySelector('.cart__count');
 
 async function updateSumOfPrices() {
   const items = Array.from(document.querySelectorAll('.cart__item'));
@@ -21,6 +22,7 @@ emptyCartButton.addEventListener('click', () => {
   } else {
     while (cart.children.length) cart.removeChild(cart.firstChild);
     updateSumOfPrices();
+    updateCartCount();
     localStorage.clear();
   }
 });
@@ -68,6 +70,7 @@ function createProductItemElement({ id: sku, title: name, thumbnail: image, pric
 function cartItemClickListener(event) {
   const description = event.target.innerText;
   event.target.remove();
+  updateCartCount();
   updateSumOfPrices();
   localStorage.removeItem(description.substring(5, 18));
 }
@@ -98,6 +101,7 @@ async function addItemToCart(event) {
 
     cart.appendChild(newCartItem);
 
+    updateCartCount();
     updateSumOfPrices();
   } catch (error) {
     window.alert(error);
@@ -169,6 +173,11 @@ function formatPrices() {
   adPrices.forEach(price => price.innerText = `R$${parseFloat(price.innerText).toFixed(2)}`);
 }
 
+function updateCartCount() {
+  const cartItems = Array.from(document.querySelectorAll('.cart__item'));
+  cartCount.innerText = cartItems.reduce((sum, item) => sum + 1, 0);
+}
+
 window.onload = async function onload() {
   updateSumOfPrices();
   const ads = await fetchAds('computador');
@@ -182,6 +191,7 @@ window.onload = async function onload() {
     item.addEventListener('click', addItemToCart));
   if (localStorage.length) loadShoppingCart();
   updateSumOfPrices();
+  updateCartCount();
   removeLoader();
 };
 

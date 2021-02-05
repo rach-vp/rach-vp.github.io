@@ -53,9 +53,17 @@
 }
 
 .cart__items {
-  padding: 0 1.5em;
+  margin: 1.5em;
+  padding: 0;
 }
 
 .cart__item {
+  border-bottom: 2px solid #888888;
   list-style: none;
+  margin-top: 1em;
+  padding-bottom: 0.5em;
+
+  &:last-child {
+    border-bottom: none;
+  }
 }

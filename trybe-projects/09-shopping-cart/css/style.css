@@ -58,14 +58,31 @@ button {
   background-color: #f0f0f0;
   border: none;
   border-radius: 100%;
-  color: #f0f0f0;
   display: flex;
   font-size: 1.25rem;
   height: 3rem;
   justify-content: center;
   outline: none;
-  width: 3rem;
+  position: relative;
+  width: 3rem; }
+
+.fa-shopping-basket {
+  color: #f0f0f0;
   -webkit-text-stroke: 1.5px #444444; }
+
+.cart__count {
+  position: absolute;
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: black;
+  border-radius: 100%;
+  top: -0.5rem;
+  right: -0.5rem;
+  color: #ffffff;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
 
 .blured {
   background-color: #00000080;
@@ -115,10 +132,16 @@ button {
   margin-bottom: 1em; }
 
 .cart__items {
-  padding: 0 1.5em; }
+  margin: 1.5em;
+  padding: 0; }
 
 .cart__item {
-  list-style: none; }
+  border-bottom: 2px solid #888888;
+  list-style: none;
+  margin-top: 1em;
+  padding-bottom: 0.5em; }
+  .cart__item:last-child {
+    border-bottom: none; }
 
 .list-title {
   font-size: 2.5rem;
