@@ -16,6 +16,37 @@
   text-shadow: 0 0  2.5px black;
 }
 
+.search-wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 35%;
+}
+
+.search-input {
+  border: 1px solid #000000;
+  flex-grow: 2;
+  height: 1.9rem;
+  outline: none;
+  padding: 0 1em;
+}
+
+::placeholder {
+  font-family: $font;
+  font-weight: bold;
+}
+
+.search-button {
+  align-items: center;
+  border: 1px solid #000000;
+  background-color: #000000;
+  color: #ffffff;
+  display: flex;
+  height: 2rem;
+  justify-content: center;
+  padding: 0.75em;
+}
+
 .show-cart-button {
   align-items: center;
   background-color: $text-on-p;
@@ -36,16 +67,16 @@
 }
 
 .cart__count {
-  position: absolute;
-  height: 1.5rem;
-  width: 1.5rem;
+  align-items: center;
   background-color: black;
   border-radius: 100%;
-  top: -0.5rem;
-  right: -0.5rem;
   color: #ffffff;
-  font-size: 0.9rem;
   display: flex;
-  align-items: center;
+  font-size: 0.9rem;
+  height: 1.5rem;
   justify-content: center;
+  position: absolute;
+  right: -0.5rem;
+  top: -0.5rem;
+  width: 1.5rem;
 }

@@ -6,6 +6,17 @@ const showCartButton = document.querySelector('.show-cart-button');
 const cartSection = document.querySelector('.cart');
 const closeCartButton = document.querySelector('.cart__close');
 const cartCount = document.querySelector('.cart__count');
+const searchInput = document.querySelector('.search-input');
+const searchButton = document.querySelector('.search-button');
+const title = document.querySelector('.list-title');
+const carousel = document.querySelector('.items');
+
+function showLoader() {
+  const loader = document.createElement('div');
+  loader.className = 'loading';
+  loader.innerText = 'Loading...';
+  document.body.prepend(loader);
+}
 
 async function updateSumOfPrices() {
   const items = Array.from(document.querySelectorAll('.cart__item'));
@@ -165,7 +176,7 @@ function formatCarousel() {
   }
   config.responsive = breakpoints;
 
-  new Glider(document.querySelector('.items'), config)
+  new Glider(carousel, config)
 }
 
 function formatPrices() {
@@ -173,22 +184,26 @@ function formatPrices() {
   adPrices.forEach(price => price.innerText = `R$${parseFloat(price.innerText).toFixed(2)}`);
 }
 
+async function loadAds(query, carouselDiv) {
+  const ads = await fetchAds(query);
+  ads.forEach((ad) => {
+    const newCard = createProductItemElement(ad);
+    document.querySelector(carouselDiv).appendChild(newCard);
+  });
+  document.querySelectorAll('.item__add').forEach(item =>
+    item.addEventListener('click', addItemToCart));
+  formatPrices();
+}
+
 function updateCartCount() {
   const cartItems = Array.from(document.querySelectorAll('.cart__item'));
   cartCount.innerText = cartItems.reduce((sum, item) => sum + 1, 0);
 }
 
+showLoader();
 window.onload = async function onload() {
-  updateSumOfPrices();
-  const ads = await fetchAds('computador');
-  ads.forEach((ad) => {
-    const newCard = createProductItemElement(ad);
-    document.querySelector('.items').appendChild(newCard);
-  });
-  formatPrices();
+  await loadAds('computador', '.items');
   formatCarousel();
-  document.querySelectorAll('.item__add').forEach(item =>
-    item.addEventListener('click', addItemToCart));
   if (localStorage.length) loadShoppingCart();
   updateSumOfPrices();
   updateCartCount();
@@ -213,3 +228,25 @@ showCartButton.addEventListener('click', () => {
 });
 
 closeCartButton.addEventListener('click', hideCart);
+
+function clearCarousel() {
+  const gliderTrack = document.querySelector('.glider-track');
+  while(gliderTrack.children.length) gliderTrack.removeChild(gliderTrack.firstChild);
+}
+
+async function searchAds() {
+  searchInput.value = '' ? window.alert('Campo de pesquisa vazio!') : (
+    showLoader(),
+    clearCarousel(),
+    await loadAds(searchInput.value, '.glider-track'),
+    title.innerText = searchInput.value,
+    removeLoader(),
+    searchInput.value = ''
+  );
+}
+
+searchButton.addEventListener('click', searchAds);
+
+searchInput.addEventListener('keydown', (e) => {
+  if (e.keyCode === 13) searchAds();
+});
