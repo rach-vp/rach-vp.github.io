@@ -12,10 +12,17 @@ const title = document.querySelector('.list-title');
 const carousel = document.querySelector('.items');
 
 function showLoader() {
+  const loaderContainer = document.createElement('div');
   const loader = document.createElement('div');
-  loader.className = 'loading';
-  loader.innerText = 'Loading...';
-  document.body.prepend(loader);
+  const loaderCircles = document.createElement('div');
+  loaderContainer.className = 'loader-container';
+  loader.className = 'loader';
+  loaderCircles.className = 'loader-circles';
+  loaderCircles.appendChild(document.createElement('div'));
+  loaderCircles.appendChild(document.createElement('div'));
+  loader.appendChild(loaderCircles);
+  loaderContainer.appendChild(loader);
+  document.body.prepend(loaderContainer);
 }
 
 async function updateSumOfPrices() {
@@ -120,8 +127,8 @@ async function addItemToCart(event) {
 }
 
 function removeLoader() {
-  const loader = document.querySelector('.loading');
-  loader.parentNode.removeChild(loader);
+  const loaderContainer = document.querySelector('.loader-container');
+  loaderContainer.parentNode.removeChild(loaderContainer);
 }
 
 function loadShoppingCart() {
