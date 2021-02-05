@@ -1,0 +1,33 @@
+.list-title {
+  font-size: 2rem;
+  letter-spacing: 5px;
+  margin-bottom: 1em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.carousel {
+  position: relative;
+  width: 90%;
+  box-sizing: border-box;
+}
+
+.items {
+  width: 95%;
+}
+
+.prev-button {
+  @extend %arrow-style;
+  left: 0;
+}
+
+.next-button {
+  @extend %arrow-style;
+  right: 0;
+}
