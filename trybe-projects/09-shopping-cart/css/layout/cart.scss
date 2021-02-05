@@ -19,6 +19,14 @@
   transition: ease-in-out 0.3s;
   width: 35%;
   z-index: 2;
+
+  @media screen and (max-width: 768px) {
+    width: 50%;
+  }
+
+  @media screen and (max-width: 425px) {
+    width: 100%;
+  }
 }
 
 .cart__visible {
@@ -27,6 +35,14 @@
 
 .cart__hidden {
   right: -35%;
+
+  @media screen and (max-width: 768px) {
+    right: -50%;
+  }
+
+  @media screen and (max-width: 425px) {
+    right: -100%;
+  }
 }
 
 .cart__close {
