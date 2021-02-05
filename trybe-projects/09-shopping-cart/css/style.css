@@ -19,7 +19,8 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
-  font-family: Ubuntu, sans-serif; }
+  font-family: Ubuntu, sans-serif;
+  position: relative; }
 
 h1 {
   margin: 0; }
@@ -334,5 +335,12 @@ button {
     border: 3px solid #00ac00;
     color: #00ac00;
     transition: ease-in-out 0.3s; }
+
+.footer-section {
+  margin-left: 1em;
+  position: absolute;
+  bottom: 1em; }
+  .footer-section a {
+    color: #000000; }
 
 /*# sourceMappingURL=style.css.map */
