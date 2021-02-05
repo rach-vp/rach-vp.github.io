@@ -183,7 +183,7 @@ function formatCarousel() {
   }
   config.responsive = breakpoints;
 
-  new Glider(carousel, config)
+  new Glider(carousel, config);
 }
 
 function formatPrices() {
@@ -246,6 +246,7 @@ async function searchAds() {
     showLoader(),
     clearCarousel(),
     await loadAds(searchInput.value, '.glider-track'),
+    Glider(carousel).refresh(),
     title.innerText = searchInput.value,
     removeLoader(),
     searchInput.value = ''
