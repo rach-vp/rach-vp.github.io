@@ -339,8 +339,9 @@ button {
 .footer-section {
   margin-left: 1em;
   position: absolute;
-  bottom: 1em; }
+  bottom: 1em;
+  color: #888888; }
   .footer-section a {
-    color: #000000; }
+    color: #888888; }
 
 /*# sourceMappingURL=style.css.map */
